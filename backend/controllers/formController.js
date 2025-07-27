@@ -29,13 +29,19 @@ export const submitForm = async (req, res) => {
 
 export const fetchSpecificSubmissions = async (req, res) => {
   try {
-    const { formId } = req.body;
+    const { formId } = req.params;
     if (!formId)
       return res.status(400).json({
-        error: "false",
-        message: "Specify which submission to be fetched",
+        error: "true",
+        message: "Form Id not specified",
       });
     // TODO
+    const submissions = await Submission.find({ formId }).sort({ created: -1 });
+    res.status(200).json({
+      error: "false",
+      message: `Fetched all submissions with form id ${formId}`,
+      data: submissions,
+    });
   } catch (error) {
     console.log("Error Fetching".bgRed, error);
     res.status(500).json({

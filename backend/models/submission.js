@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const submissionSchema = new mongoose.Schema(
   {
-    formId: { type: String, required: true },
+    formId: { type: String, required: true, index: true },
     data: { type: Object, required: true },
   },
   { timestamps: true }

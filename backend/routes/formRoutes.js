@@ -7,6 +7,6 @@ import {
 const router = express.Router();
 
 router.post("/submit", submitForm);
-router.get("/submit", fetchSpecificSubmissions);
+router.get("/submit/:formId", fetchSpecificSubmissions);
 
 export default router;
