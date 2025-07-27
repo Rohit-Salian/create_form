@@ -54,6 +54,11 @@ const DynamicForm = ({ schema }: DynamicFormProps): JSX.Element => {
       component="form"
       onSubmit={handleSubmit(onSubmit)}
       sx={{ maxWidth: 500, mx: "auto", mt: 4 }}
+      // for netlify
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
     >
       <Typography variant="h4" gutterBottom>
         {`${schema.title} Form`}
