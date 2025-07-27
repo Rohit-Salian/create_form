@@ -35,7 +35,7 @@ export const fetchSpecificSubmissions = async (req, res) => {
         error: "false",
         message: "Specify which submission to be fetched",
       });
-    //PENDING
+    // TODO
   } catch (error) {
     console.log("Error Fetching".bgRed, error);
     res.status(500).json({
