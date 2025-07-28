@@ -1,5 +1,5 @@
 {
-  "name": "formbuilder",
+  "name": "server",
   "version": "1.0.0",
   "description": "dynamic form builder",
   "main": "server.js",

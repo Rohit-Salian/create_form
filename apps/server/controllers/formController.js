@@ -1,5 +1,5 @@
 import Submission from "../models/submission.js";
-import colors from "colors/index.js";
+import colors from "colors";
 
 export const submitForm = async (req, res) => {
   try {
