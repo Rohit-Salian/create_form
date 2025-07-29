@@ -35,7 +35,7 @@ export const fetchSpecificSubmissions = async (req, res) => {
         error: "true",
         message: "Form Id not specified",
       });
-    // TODO
+
     const submissions = await Submission.find({ formId }).sort({ created: -1 });
     res.status(200).json({
       error: "false",

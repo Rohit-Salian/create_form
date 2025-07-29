@@ -1,10 +1,14 @@
 import "./App.css";
-import DefaultForm from "./components/defaultForm/DefaultForm";
+// import DefaultForm from "./components/defaultForm/DefaultForm";
+import FormCreator from "./components/formCreator/FormCreator";
+// import ListSubmissionsById from "./components/listSubmissionsById/ListSubmissionsById";
 
 function App() {
   return (
     <>
-      <DefaultForm />
+      {/* <DefaultForm /> */}
+      {/* <ListSubmissionsById /> */}
+      <FormCreator />
     </>
   );
 }
